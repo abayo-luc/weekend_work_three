@@ -3,8 +3,15 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+  first_word = base_word.split("")
+  second_word = mutation.split("")
+  if first_word == second_word
+    return true
+  else
+    return false
+  end
 end
+
 
 # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."

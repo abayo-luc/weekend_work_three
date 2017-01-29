@@ -3,7 +3,14 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-
+  if array[0] < array[1]
+    range_number_array = Array(array[0]..array[1])
+    result = range_number_array.reduce { |value1,value2| value1 + value2}
+  else
+    new_array = array.reverse
+    range_number_array = Array(new_array[0]..new_array[1])
+    result = range_number_array.reduce { |value1,value2| value1 + value2}
+  end
 end
 
 # Driver code - don't touch anything below this line.
