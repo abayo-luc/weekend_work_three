@@ -5,13 +5,12 @@
 def mutation?(base_word, mutation)
   first_word = base_word.split("")
   second_word = mutation.split("")
-  if first_word == second_word
+  if second_word.all?{ |letter| first_word.include?(letter) }
     return true
   else
     return false
   end
 end
-
 
 # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."
